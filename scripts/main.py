@@ -56,12 +56,50 @@ custom_css = """
 </style>
 """
 
-# Insert custom CSS into <head>
-html_content = html_content.replace("<head>", "<head>\n" + custom_css, 1)
+splash_css = """
+<style>
+    #splash-screen {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: #1287cd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    #splash-screen img {
+        width: 150px;
+        height: 150px;
+    }
+    #splash-screen h1 {
+        color: white;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style>
+"""
 
-# Insert service worker script before </body>
-html_content = html_content.replace("</body>", service_worker_script + "\n</body>", 1)
+splash_html = """
+<div id="splash-screen">
+    <img src="icon-512.png" alt="Logo">
+    <h1>Welcome to Wind Farms Map</h1>
+</div>
+<script>
+    setTimeout(() => {
+        document.getElementById('splash-screen').style.display = 'none';
+    }, 2000);
+</script>
+"""
 
-# Save the modified HTML
+# Insert splash CSS into <head>
+html_content = html_content.replace("<head>", "<head>\n" + splash_css, 1)
+
+# Insert splash HTML into <body>
+html_content = html_content.replace("<body>", "<body>\n" + splash_html, 1)
+
+# Save the updated HTML
 with open(html_file, "w", encoding="utf-8") as f:
     f.write(html_content)
+
