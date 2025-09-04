@@ -70,12 +70,12 @@ splash_css = """
         z-index: 9999;
     }
     #splash-screen img {
-        width: 150px;
-        height: 150px;
+        width: 900;
+        height: 900px;
     }
     #splash-screen h1 {
         color: white;
-        font-size: 24px;
+        font-size: 48px;
         margin-top: 20px;
     }
 </style>
@@ -84,12 +84,12 @@ splash_css = """
 splash_html = """
 <div id="splash-screen">
     <img src="icon-512.png" alt="Logo">
-    <h1>Welcome to Wind Farms Map</h1>
+    <h1>Wind Farms Map</h1>
 </div>
 <script>
     setTimeout(() => {
         document.getElementById('splash-screen').style.display = 'none';
-    }, 2000);
+    }, 4000);
 </script>
 """
 
