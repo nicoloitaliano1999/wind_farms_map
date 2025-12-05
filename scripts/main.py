@@ -70,8 +70,8 @@ splash_css = """
         z-index: 9999;
     }
     #splash-screen img {
-        width: 900;
-        height: 900px;
+        width: 2700;
+        height: 2700px;
     }
     #splash-screen h1 {
         color: white;
@@ -94,10 +94,10 @@ splash_html = """
 """
 
 # Insert splash CSS into <head>
-html_content = html_content.replace("<head>", "<head>\n" + splash_css, 1)
+# html_content = html_content.replace("<head>", "<head>\n" + splash_css, 1)
 
 # Insert splash HTML into <body>
-html_content = html_content.replace("<body>", "<body>\n" + splash_html, 1)
+# html_content = html_content.replace("<body>", "<body>\n" + splash_html, 1)
 
 # Save the updated HTML
 with open(html_file, "w", encoding="utf-8") as f:
