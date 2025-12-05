@@ -56,42 +56,42 @@ custom_css = """
 </style>
 """
 
-splash_css = """
-<style>
-    #splash-screen {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-color: #1287cd;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-    }
-    #splash-screen img {
-        width: 2700;
-        height: 2700px;
-    }
-    #splash-screen h1 {
-        color: white;
-        font-size: 48px;
-        margin-top: 20px;
-    }
-</style>
-"""
+# splash_css = """
+# <style>
+#     #splash-screen {
+#         position: fixed;
+#         top: 0; left: 0;
+#         width: 100%; height: 100%;
+#         background-color: #1287cd;
+#         display: flex;
+#         flex-direction: column;
+#         justify-content: center;
+#         align-items: center;
+#         z-index: 9999;
+#     }
+#     #splash-screen img {
+#         width: 2700;
+#         height: 2700px;
+#     }
+#     #splash-screen h1 {
+#         color: white;
+#         font-size: 48px;
+#         margin-top: 20px;
+#     }
+# </style>
+# """
 
-splash_html = """
-<div id="splash-screen">
-    <img src="icon-512.png" alt="Logo">
-    <h1>Wind Farms Map</h1>
-</div>
-<script>
-    setTimeout(() => {
-        document.getElementById('splash-screen').style.display = 'none';
-    }, 4000);
-</script>
-"""
+# splash_html = """
+# <div id="splash-screen">
+#     <img src="icon-512.png" alt="Logo">
+#     <h1>Wind Farms Map</h1>
+# </div>
+# <script>
+#     setTimeout(() => {
+#         document.getElementById('splash-screen').style.display = 'none';
+#     }, 4000);
+# </script>
+# """
 
 # Insert splash CSS into <head>
 # html_content = html_content.replace("<head>", "<head>\n" + splash_css, 1)
